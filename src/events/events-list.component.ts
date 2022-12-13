@@ -3,7 +3,6 @@ import { Component, OnInit } from "@angular/core";
 import { ToastrService } from 'src/app/common/toastr.service';
 
 @Component({
-  selector: 'events-list',
   template: `
     <div>
       <h1>Upcoming Angular Events</h1>
