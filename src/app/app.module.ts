@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrService } from './common/toastr.service';
 import { appRoutes } from './routes';
+import { AuthService } from './user/auth.service';
 
 import {
   EventsListComponent,
@@ -36,7 +37,8 @@ import { RouterModule } from '@angular/router';
       provide: 'canDeactivateCreatEvent',
       useValue: checkDirtyState
     },
-    EventListResolver
+    EventListResolver,
+    AuthService
   ],
   bootstrap: [EventsAppComponent],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
